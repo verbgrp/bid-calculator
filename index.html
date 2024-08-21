@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bid & Proposal Budget Calculator</title>
+</head>
+<body>
+    <div id="budget-calculator">
+        <h2>Bid & Proposal Budget Calculator</h2>
+        <form id="calculator-form">
+            <label for="planned-budget">Planned Bid & Proposal Budget ($):</label>
+            <input type="number" id="planned-budget" name="planned-budget" required>
+
+            <label for="actual-spending">Actual Spending ($):</label>
+            <input type="number" id="actual-spending" name="actual-spending" required>
+
+            <button type="button" onclick="calculateDifference()">Calculate Difference</button>
+        </form>
+
+        <div id="result" style="display:none;">
+            <h3>Results</h3>
+            <p>Planned Budget: $<span id="planned-amount"></span></p>
+            <p>Actual Spending: $<span id="actual-amount"></span></p>
+            <p>Difference: $<span id="difference"></span></p>
+            <p>Percentage Difference: <span id="percentage-difference"></span>%</p>
+            <p><span id="feedback"></span></p>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
